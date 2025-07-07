@@ -7,3 +7,4 @@ account.makeWithdrawal(20, DateTime.Now.AddDays(-1), "Bought a hamburger");
 Console.WriteLine(account.Balance);
 
 Console.WriteLine($"Account {account.id} was created for {account.Owner} with a balance of {account.Balance}.");
+Console.WriteLine(account.getAccountHistory());

@@ -53,4 +53,20 @@ public class BankAccount
         var withdrawal = new Transactions(-amount, date, note);
         _allTransactions.Add(withdrawal);
     }
+
+    public string getAccountHistory()
+    {
+        var report = new System.Text.StringBuilder();
+
+        decimal balance = 0;
+        report.AppendLine("Date\t\tAmount\tBalance\tNote");
+
+        foreach (var item in _allTransactions)
+        {
+            balance += item.Amount;
+            report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{balance}\t{item.Notes}");
+        }
+
+        return report.ToString();
+    }
 }
