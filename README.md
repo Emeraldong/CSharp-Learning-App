@@ -19,3 +19,7 @@ MONGODB COLLECTION (TABLE) CREATION GUIDE:
         <FIELD 1>: <DATA 1>,
         <FIELD 2>: <DATA 2>
     })`
+
+CONNECTING TO MONGODB DATABASE:
+1. Install MongoDB.Driver by running `dotnet add package MongoDB.Driver` in project directory.
+2. Create a client to connect with using `new MongoClient("mongodb://127.0.0.1:27017")` for the default local connection.
